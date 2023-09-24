@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import { ReactNode } from 'react';
 import {
   Avatar,
@@ -44,14 +45,19 @@ const Home: NextPage = () => {
   const { data: session } = useSession();
   const emailColor = useColorModeValue('gray.700', 'gray.200');
   const boxBgColor = useColorModeValue('gray.100', 'gray.900');
-
+  const router = useRouter(); // Initialize the router
   if (session) {
     const { user } = session;
+
+    // Redirect to '/dashboard' after successful login
+     router.push('/dataGrid1_page');
+
     return (
       <>
         <Box bg={boxBgColor} px={4}>
           <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
             <Box><Text fontSize="2xl" as="b">Discord NextAuth</Text></Box>
+  
 
             <Flex alignItems={'center'}>
               <Stack direction={'row'} spacing={7}>

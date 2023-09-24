@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+
+:root {
+  --color-bg: #fff;
+  --color-border: #e5e7eb;
+  --color-sidebar-item: #f3f4f6;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  
+ /* margin-top: 20px;  Adjust the value to specify the amount of space you want */
+  background-color: #eee;
+  font-family: "Roboto", sans-serif;   
+
+  
+}
+
+.layout {
+  display: flex;
+  height: 100vh;
+  position: relative;
+  gap: 2rem;
+}
+
+.layout__main-content {
+  flex-grow: 1;
+
+/*  margin-left: 17rem;  Adjust this value to match the width of your sidebar */
+}
+
+.sidebar__wrapper {
+  position: relative;
+}
+
+.sidebar {
+  width: 17rem;
+  height: 100%;
+  background-color: var(--color-bg);
+  padding: 1rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  overflow: hidden;
+
+ /* position: fixed;  Add this line to make the sidebar vertically fixed */
+}
+
+.sidebar__top {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sidebar__logo {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: contain;
+  border-radius: 1rem;
+}
+
+.sidebar__logo-name {
+
+  
+
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.sidebar__list {
+  list-style: none;
+}
+
+.sidebar__link {
+  display: inline-block;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #000;
+  padding: 0.8rem 1rem;
+  display: flex;
+  background-color: var(--color-sidebar-item);
+  margin-bottom: 1rem;
+  border-radius: 0.8rem;
+}
+
+.sidebar__link--active {
+  color: #fff;
+  background-color: #10b981;
+}
+
+.sidebar__icon {
+  display: inline-block;
+  font-size: 1.2rem;
+}
+
+.sidebar__name {
+  margin-left: 0.5rem;
+}
+
+[data-collapse="true"] {
+  width: 5.3rem;
+}
+
+[data-collapse="true"] .sidebar__name,
+[data-collapse="true"] .sidebar__logo-name {
+  display: none;
+}
+
+.btn {
+  position: absolute;
+  right: 0;
+  top: 4.7rem;
+  border: none;
+  background-color: var(--color-bg);
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transform: translateX(50%);
+  font-size: 1.1rem;
+}
+
+
+.title a {
+  color: #0070f3; 
+  text-decoration: none;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+
+
+
+
+/*AG grid*/
+.cell-sub-result {
+  text-align: center;
+  color: #000000;
+ /* font-weight: bold;*/
+  background-color:  #F5F7F7;
+}
+.cell-fail {
+  text-align: center;
+  font-weight: bold;
+  background-color: #f44336;
+}
+
+.cell-pass {
+  text-align: center;
+  font-weight: bold;
+  background-color: #4caf50;
+}
+
+
+
+/* Create the vertical margin at the top */
+.vertical-margin {
+  height: 100px; /* Adjust the height as needed */
+  background-color: transparent; /* Set background color as needed */
+}
+
+/* Create the horizontal green separator */
+.separator {
+  height: 2px; /* Adjust the height as needed */
+  background-color: #4caf50; /* Set the background color to green or your desired color */
+  border-radius: 10px; /* Adjust the border radius to control the roundness of corners */
+}
+
+/* Style for the content below the separator */
+.content {
+  padding: 20px; /* Add padding to the content area below the separator */
+  /* Add any additional styles for your content */
+}
+
+
+
+
+
+
+
+/*
+  
+*/
+
+.form {
+  border: solid black 1px;
+}
+
+.elem {
+  overflow: hidden;
+  display: inline-block;
+  width: 150px;
+  height: 20px;
+}
+
+.charts {
+  text-align: center;
+}
+
+.chart {
+  border: solid #589636 1px;
+  margin: 5px;
+  display: inline-block;
+}
+
+
+
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #d6d6d6;
+  box-sizing: content-box; /* or border-box, depending on your design */
+  padding-left :40px;
+  height: 89px;  /* Adjust the height as needed */
+  margin-bottom: 5px;
+ 
+  font-family:   "Euclid Circular", sans-serif;
+  font-weight: 50;
+  font-size: 16px;
+/*  text-align: center;  Center header content */
+  
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Center text vertically */
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); /* Add a light drop shadow */
+ 
+
+  
+}
+
+.header_v2 {  /* unused */
+  background-color: #ffffff;
+  border-bottom: 1px solid #d6d6d6;
+  box-sizing: content-box; /* or border-box, depending on your design */
+  padding-left :40px;
+
+
+  height: 80px;  /* Adjust the height as needed */
+  width: 200px;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+ 
+
+/*  text-align: center;  Center header content */
+  
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Center text vertically */
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2); /* Add a light drop shadow */
+ 
+  border-radius: 10px; /* Adjust the radius as needed */
+  border: 1px solid #c1bfbf; /* Add a border if desired */
+  
+  overflow: hidden; /* Hide content that overflows the container */
+
+}
+
+
+/* YourComponent.css */
+.rounded-border {
+  /* display: inline-block;  Makes the container take the size of its content */
+  border-radius: 10px; /* Adjust the radius as needed */
+  border: 1px solid #c1bfbf; /* Add a border if desired */
+  
+  overflow: hidden; /* Hide content that overflows the container */
+  
+ /* display: flex;  Use flexbox layout */
+ align-items: center; /*  Center text vertically */
+
+
+}
+.chart-group {
+
+  padding: 30px;  
+  background-color: #F9FBFA; /* #F3F4F6; Set your desired background color */
+  
+  padding-top: 80px;/* Top padding */
+  padding-bottom: 80px;
+
+  display: flex; /* Use flexbox layout */
+  justify-content: space-between; /* Horizontally space the items */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add a light drop shadow */
+}
+
+
+.image-grid {
+  width: 100%;
+  
+  background-color: #F3F4F6; /* #F3F4F6; Set your desired background color */
+  padding: 30px;  
+
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  max-height: 400px; /* Set the maximum height for the scrollable area */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+ 
+}
+
+.image-container {
+  position: relative;
+}
+
+.image {
+  max-width: 100%; /* Ensure the image doesn't exceed its container width */
+  max-height: 100%; /* Ensure the image doesn't exceed its container height */
+  display: block; /* Remove any extra space below the image */
+  margin: 0 auto; /* Center the image horizontally */
+}
+ 
